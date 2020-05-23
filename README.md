@@ -12,3 +12,11 @@
 - Option for filter out only https website.
 - Option to get IP for every SubDomain.
 - Option for filter out only live Websites.
+
+## Installation:
+
+```
+> git clone https://github.com/j1t3sh/SUB-Z_Windows.git
+> pip3 install -r requirements.txt 
+> python SUB-Z.py -d oyorooms.com -ip -live
+```
