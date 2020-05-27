@@ -114,42 +114,7 @@ def subez():
             except:
                 continue   
     file1.close() 
-    os.system("rm "+args.domain+".txt")
 
-
-def assetfinder():
-    p = Popen(['/usr/bin/which', "assetfinder"], stdout=PIPE, stderr=PIPE)
-    p.communicate()
-    if(p.returncode == 1): #If assetfinder not installed
-        print("\u001b[36m[+]Installing Assetfinder Please Wait......\u001b[0m")
-        os.system("sudo chmod +x assetfinder;sudo cp assetfinder /usr/bin/")
-        os.system('rm assetfinder')
-        assetfinder()
-    else:
-        print("\u001b[32m[+]Assetfinder Found.\u001b[0m\n") 
-        if path.exists("assetfinder"):
-            os.system("rm assetfinder")
-            subez()
-        else:
-            subez()      
-        
-
-
-def httprobe():
-    s = Popen(['/usr/bin/which', "httprobe"], stdout=PIPE, stderr=PIPE)
-    s.communicate()
-    if(s.returncode == 1): #If httprobe not installed
-        print("\u001b[36m[+]Installing httprobe Please Wait......\u001b[0m")
-        os.system("sudo chmod +x httprobe;sudo cp httprobe /usr/bin/")
-        os.system('rm httprobe')
-        httprobe()
-    else:
-        print("\u001b[32m[+]Httprobe Found.\u001b[0m\n")
-        if path.exists("httprobe"):
-            os.system("rm httprobe")
-            assetfinder()
-        else:
-            assetfinder()
             
 try:
     subez()
