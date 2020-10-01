@@ -46,10 +46,7 @@ banner = ("""\u001b[36m
 
 print(banner)
 
-#if args.https:
-    #args.https = "--prefer-https"
-#else:
-    #args.https = ""
+
 
 def subez():
     spinner=itertools.cycle(['|','/','-','\\'])
