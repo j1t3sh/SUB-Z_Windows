@@ -18,7 +18,6 @@ import time
 
 parser = argparse.ArgumentParser(description='\u001b[36mSubZ - A Subdomain Enumeration Tool \u001b[0m')
 parser.add_argument('-d','--domain' , help = 'Domain name of the taget [ex : bugcrowd.com]' , required=True)
-#parser.add_argument('-https', help='To get the Subdomains with HTTPS Service ',action='store_true')
 parser.add_argument('-ip', help='To get the IP address of the Subdomains',action='store_true')
 parser.add_argument('-live', help='To find only live subdomains',action='store_true')
 
