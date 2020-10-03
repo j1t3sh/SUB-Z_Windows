@@ -47,7 +47,7 @@ print(banner)
 
 
 
-def subez():
+def subez():      #SubZ function main function
     spinner=itertools.cycle(['|','/','-','\\'])
     process=subprocess.Popen(".\wassetfinder.exe --subs-only " + args.domain + " | .\httprobe > " + args.domain +".txt",shell=True)
     while process.poll() is None:
@@ -73,7 +73,7 @@ def subez():
         new_list.append(z)
     
     for q in new_list:
-        def ip():
+        def ip():   #to find ip for given domains
             if "https" in q:
                 ipaddr = q.replace("https://","")
                 return ipaddr
@@ -87,7 +87,7 @@ def subez():
         args.ip = ""
 
     if args.live:
-        print("[+]Scanning for only Live Subdomains....\n")
+        print("[+]Scanning for only Live Subdomains....\n")  #to find sudomains live
         for m in new_list:
             try:
                 response = requests.get(m)
